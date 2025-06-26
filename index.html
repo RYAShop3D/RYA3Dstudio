@@ -14,24 +14,35 @@
       scroll-behavior: smooth;
     }
     header {
-      background: #003366;
-      color: white;
-      padding: 30px 20px;
+      background: #cce6ff;
+      color: #003366;
+      padding: 25px 20px;
       text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       animation: fadeInDown 1s ease-out;
     }
-    header h1 {
-      font-size: 2.8em;
+    .logo {
+      height: 70px;
+      margin-bottom: 10px;
+      animation: pulse 2s infinite;
+      transition: transform 0.3s;
+    }
+    .logo:hover {
+      transform: scale(1.05);
+    }
+    h1 {
+      font-size: 2.5em;
       margin: 0;
-      letter-spacing: 1px;
     }
     header p {
       font-style: italic;
+      color: #005599;
       margin-top: 5px;
-      color: #cce6ff;
     }
     nav {
-      background: #001f33;
+      background: #007acc;
       padding: 12px;
       text-align: center;
       position: sticky;
@@ -46,4 +57,29 @@
       transition: color 0.3s;
     }
     nav a:hover {
-      color: #
+      color: #ffe680;
+    }
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+    }
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="logo.png" alt="Logo Impresiones RYA" class="logo" />
+    <h1>Impresiones RYA</h1>
+    <p>Diseños creativos en impresión 3D</p>
+  </header>
+
+  <nav>
+    <a href="#catalogo">Catálogo</a>
+    <a href="#galeria">Galería</a>
+    <a href="#nosotros">Nosotros</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
