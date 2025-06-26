@@ -2,278 +2,60 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Impresiones RYA - Tienda de Impresión 3D</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      background: #f5f7fa;
-      color: #333;
-      scroll-behavior: smooth;
-    }
-    header {
-      background-image: url('https://images.unsplash.com/photo-1613151831569-982f1f8fd5d6?auto=format&fit=crop&w=1600&q=80');
-      background-size: cover;
-      background-position: center;
-      height: 320px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      color: white;
-      position: relative;
-      animation: fadeInDown 1s ease-out;
-    }
-    header::after {
-      content: '';
-      position: absolute;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      background: rgba(0,0,0,0.5);
-      z-index: 1;
-    }
-    header h1, header p, .logo {
-      z-index: 2;
-    }
-    .logo {
-      height: 80px;
-      margin-bottom: 12px;
-      animation: pulse 2.5s infinite;
-      transition: transform 0.3s;
-      border-radius: 8px;
-      box-shadow: 0 0 8px rgba(255,255,255,0.7);
-    }
-    .logo:hover {
-      transform: scale(1.08);
-    }
-    h1 {
-      font-size: 2.7em;
-      margin-bottom: 6px;
-    }
-    header p {
-      font-size: 1.2em;
-      color: #e0f0ff;
-    }
-    nav {
-      background: #003366;
-      padding: 10px 0;
-      text-align: center;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-    }
-    nav a {
-      color: white;
-      margin: 0 18px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: color 0.3s ease;
-    }
-    nav a:hover {
-      color: #00c0ff;
-    }
-    @keyframes pulse {
-      0%, 100% { transform: scale(1); }
-      50% { transform: scale(1.05); }
-    }
-    @keyframes fadeInDown {
-      from { opacity: 0; transform: translateY(-30px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Impresiones RYA</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
+  <!-- 🧩 Cabecera con imagen -->
   <header>
-    <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD...TU_LOGO_COMPLETO_BASE64..." alt="Logo Impresiones RYA" class="logo" />
-    <h1>Impresiones RYA</h1>
-    <p>Diseños creativos en impresión 3D</p>
+    <img src="/imagenes/cabecera.png" alt="Cabecera de Impresiones RYA" />
   </header>
 
-  <nav>
-    <a href="#catalogo">Catálogo</a>
-    <a href="#galeria">Galería</a>
-    <a href="#nosotros">Nosotros</a>
-    <a href="#contacto">Contacto</a>
-  </nav>
-  <section class="hero" style="background: linear-gradient(135deg, #0099cc, #33ccff); color: white; padding: 60px 20px; text-align: center;">
-    <h2 style="font-size: 2.5em; margin-bottom: 10px;">Transformamos ideas en objetos reales</h2>
-    <p style="font-size: 1.2em; max-width: 600px; margin: auto;">
-      En Impresiones RYA damos vida a tus ideas con creatividad, precisión y confianza. Tu aliado local en impresión 3D personalizada 💡
-    </p>
+  <!-- 🎨 Logo y título -->
+  <section id="inicio" style="text-align: center;">
+    <img src="/imagenes/logo.png" alt="Logo de la empresa" style="height: 100px;" />
+    <h1>Impresiones RYA</h1>
+    <p>Diseños únicos en PLA desde Galicia</p>
   </section>
 
-  <style>
-    .catalogo {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 20px;
-      padding: 30px 20px;
-    }
-    .producto {
-      background: white;
-      border-radius: 8px;
-      padding: 15px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      text-align: center;
-      transition: transform 0.3s;
-    }
-    .producto:hover {
-      transform: scale(1.03);
-    }
-    .producto img {
-      width: 100%;
-      border-radius: 6px;
-    }
-    .btn-whatsapp {
-      background: #25D366;
-      color: white;
-      padding: 10px 15px;
-      border: none;
-      border-radius: 5px;
-      text-decoration: none;
-      display: inline-block;
-      margin-top: 10px;
-      font-weight: bold;
-    }
-    .btn-whatsapp:hover {
-      background: #1ebe5b;
-    }
-  </style>
-
-  <section id="catalogo" class="catalogo">
-    <div class="producto">
-      <img src="https://images.unsplash.com/photo-1614680376593-902f74c3c9a6?auto=format&fit=crop&w=600&q=80" alt="Colgador de Gato" />
-      <h3>Colgador de Cocina Gato</h3>
-      <p>Diseño creativo para tu hogar</p>
-      <a class="btn-whatsapp" href="https://wa.me/34621084104?text=Hola,+me+interesa+el+colgador+de+gato+3D">Consultar por WhatsApp</a>
-    </div>
-    <div class="producto">
-      <img src="https://images.unsplash.com/photo-1581090700227-1e8e8f1c5b1d?auto=format&fit=crop&w=600&q=80" alt="Soporte para Móvil" />
-      <h3>Soporte para Móvil</h3>
-      <p>Práctico y personalizado</p>
-      <a class="btn-whatsapp" href="https://wa.me/34621084104?text=Hola,+me+interesa+el+soporte+para+móvil+3D">Consultar por WhatsApp</a>
+  <!-- 🧱 Galería de productos -->
+  <section id="productos">
+    <h2>Productos destacados</h2>
+    <div class="galeria">
+      <div class="item">
+        <img src="/imagenes/colgador.png" alt="Colgador" />
+        <p>Colgador en PLA</p>
+      </div>
+      <div class="item">
+        <img src="/imagenes/soporte.png" alt="Soporte" />
+        <p>Soporte multifunción</p>
+      </div>
+      <div class="item">
+        <img src="/imagenes/llaveros.png" alt="Llaveros" />
+        <p>Llaveros con signos zodiacales</p>
+      </div>
+      <div class="item">
+        <img src="/imagenes/cajita.png" alt="Cajita" />
+        <p>Cajita estilo cofre</p>
+      </div>
+      <div class="item">
+        <img src="/imagenes/figura.png" alt="Figura decorativa" />
+        <p>Figura decorativa</p>
+      </div>
+      <div class="item">
+        <img src="/imagenes/letrero.png" alt="Letrero personalizado" />
+        <p>Letrero con nombre</p>
+      </div>
     </div>
   </section>
-  <style>
-    .galeria {
-      padding: 40px 20px;
-      background-color: #eef6fa;
-    }
-    .galeria h2 {
-      text-align: center;
-      font-size: 2em;
-      margin-bottom: 20px;
-      color: #003366;
-    }
-    .galeria-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
-    }
-    .galeria img {
-      width: 100%;
-      border-radius: 8px;
-      transition: transform 0.3s;
-    }
-    .galeria img:hover {
-      transform: scale(1.05);
-    }
-  </style>
 
-  <section id="galeria" class="galeria">
-    <h2>Galería de trabajos 3D</h2>
-    <div class="galeria-grid">
-      <img src="https://images.unsplash.com/photo-1595433707802-6c1f9779d19d?auto=format&fit=crop&w=600&q=80" alt="Llaveros Personalizados 3D" />
-      <img src="https://images.unsplash.com/photo-1619701913505-9c6d5e5ae54d?auto=format&fit=crop&w=600&q=80" alt="Cajita Decorativa Impresa" />
-      <img src="https://images.unsplash.com/photo-1581093588401-5d1f5e6dfb12?auto=format&fit=crop&w=600&q=80" alt="Figura Decorativa 3D" />
-      <img src="https://images.unsplash.com/photo-1604176354204-5e3671400302?auto=format&fit=crop&w=600&q=80" alt="Letrero personalizado en 3D" />
-    </div>
-  </section>
-  <style>
-    .nosotros {
-      background: #ffffff;
-      padding: 50px 20px;
-      text-align: center;
-    }
-    .nosotros h2 {
-      font-size: 2em;
-      color: #003366;
-      margin-bottom: 20px;
-    }
-    .nosotros p {
-      max-width: 700px;
-      margin: auto;
-      font-size: 1.1em;
-      line-height: 1.6;
-      color: #444;
-    }
-  </style>
-
-  <section id="nosotros" class="nosotros">
-    <h2>Sobre nosotros</h2>
-    <p>
-      Somos Impresiones RYA, un pequeño taller con gran pasión por convertir ideas en objetos reales.  
-      Nos especializamos en impresión 3D personalizada, desde detalles decorativos hasta soluciones prácticas para el día a día.  
-      Cada diseño que sale de nuestras manos está hecho con mimo, precisión y mucho cariño gallego 💙
-    </p>
-  </section>
-  <style>
-    .contacto {
-      padding: 50px 20px;
-      background: #f0f8ff;
-      text-align: center;
-    }
-    .contacto h2 {
-      color: #003366;
-      font-size: 2em;
-      margin-bottom: 20px;
-    }
-    .contacto p {
-      font-size: 1.1em;
-      margin-bottom: 30px;
-      color: #444;
-    }
-    .botones-contacto a {
-      display: inline-block;
-      margin: 10px;
-      padding: 12px 20px;
-      border-radius: 5px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    .btn-wsp {
-      background-color: #25D366;
-      color: white;
-    }
-    .btn-mail {
-      background-color: #003366;
-      color: white;
-    }
-    .btn-wsp:hover {
-      background-color: #1ebe5b;
-    }
-    .btn-mail:hover {
-      background-color: #001d4d;
-    }
-  </style>
-
-  <section id="contacto" class="contacto">
-    <h2>Contacto</h2>
-    <p>¿Tienes una idea? ¿Quieres encargarnos algo especial? Estamos aquí para ayudarte 💬</p>
-    <div class="botones-contacto">
-      <a class="btn-wsp" href="https://wa.me/34621084104" target="_blank">Escríbenos por WhatsApp</a>
-      <a class="btn-mail" href="mailto:impresionesrya@example.com">Envíanos un correo</a>
-    </div>
-  </section>
-  <footer style="background: #003366; color: white; text-align: center; padding: 20px;">
-    <p>&copy; 2025 Impresiones RYA · Diseñado con 💙 y creatividad 3D en Galicia</p>
+  <!-- 📞 Contacto -->
+  <footer>
+    <h3>Contáctanos</h3>
+    <p>Email: impresiones.rya@example.com</p>
+    <p>Instagram: @impresionesRYA</p>
   </footer>
 
 </body>
